@@ -1,0 +1,244 @@
+<div class="container">
+    <div class="section-header">
+        <h2 class="section-title animate-on-scroll" data-animation="fadeInUp">Certifications</h2>
+        <p class="section-subtitle animate-on-scroll" data-animation="fadeInUp" data-delay="0.2s">
+            Professional credentials and qualifications
+        </p>
+    </div>
+    
+    <div class="certifications-slider">
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="certification-card animate-on-scroll interactive-card" data-animation="fadeInUp">
+                    <div class="cert-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Google Analytics Certification</h3>
+                    <div class="cert-issuer">Google</div>
+                    <div class="cert-date">2023</div>
+                    <p>Advanced digital analytics and data interpretation skills</p>
+                </div>
+                
+                <div class="certification-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.2s">
+                    <div class="cert-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Project Management Professional (PMP)</h3>
+                    <div class="cert-issuer">Project Management Institute</div>
+                    <div class="cert-date">2023</div>
+                    <p>Project planning, execution, and management methodologies</p>
+                </div>
+                
+                <div class="certification-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.4s">
+                    <div class="cert-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Financial Modeling Certification</h3>
+                    <div class="cert-issuer">Corporate Finance Institute</div>
+                    <div class="cert-date">2022</div>
+                    <p>Advanced Excel modeling and financial analysis techniques</p>
+                </div>
+                
+                <div class="certification-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.6s">
+                    <div class="cert-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Leadership Development Program</h3>
+                    <div class="cert-issuer">Harvard Business Publishing</div>
+                    <div class="cert-date">2022</div>
+                    <p>Strategic leadership and organizational management</p>
+                </div>
+                
+                <div class="certification-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.8s">
+                    <div class="cert-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Digital Marketing Certification</h3>
+                    <div class="cert-issuer">HubSpot Academy</div>
+                    <div class="cert-date">2022</div>
+                    <p>Comprehensive digital marketing strategy and implementation</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-controls">
+            <button class="slider-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .certifications-slider {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .slider-container {
+        overflow: hidden;
+        padding: 1rem 0;
+    }
+    
+    .slider-track {
+        display: flex;
+        gap: 2rem;
+        transition: transform 0.5s ease;
+    }
+    
+    .certification-card {
+        background: var(--gradient-card);
+        padding: 2rem;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        min-width: 300px;
+        box-shadow: var(--shadow-md);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition-medium);
+    }
+    
+    .certification-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .cert-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .certification-card h3 {
+        color: var(--accent4);
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+    
+    .cert-issuer {
+        color: var(--text);
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+    }
+    
+    .cert-date {
+        color: var(--accent2);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .certification-card p {
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+    
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .slider-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: var(--transition-medium);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .slider-btn:hover {
+        transform: scale(1.1);
+        box-shadow: var(--shadow-glow);
+    }
+    
+    @media (max-width: 768px) {
+        .certification-card {
+            min-width: 280px;
+        }
+        
+        .slider-track {
+            gap: 1rem;
+        }
+    }
+</style>
+
+<script>
+    // Certification slider functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const sliderTrack = document.querySelector('.slider-track');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const cards = document.querySelectorAll('.certification-card');
+        
+        let currentPosition = 0;
+        const cardWidth = cards[0].offsetWidth + 32; // width + gap
+        
+        function updateSlider() {
+            sliderTrack.style.transform = `translateX(-${currentPosition}px)`;
+        }
+        
+        nextBtn.addEventListener('click', function() {
+            const maxPosition = (cards.length - 1) * cardWidth;
+            if (currentPosition < maxPosition) {
+                currentPosition += cardWidth;
+                updateSlider();
+            }
+        });
+        
+        prevBtn.addEventListener('click', function() {
+            if (currentPosition > 0) {
+                currentPosition -= cardWidth;
+                updateSlider();
+            }
+        });
+        
+        // Auto slide
+        let autoSlide = setInterval(() => {
+            const maxPosition = (cards.length - 1) * cardWidth;
+            if (currentPosition >= maxPosition) {
+                currentPosition = 0;
+            } else {
+                currentPosition += cardWidth;
+            }
+            updateSlider();
+        }, 5000);
+        
+        // Pause auto slide on hover
+        sliderTrack.addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+        });
+        
+        sliderTrack.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => {
+                const maxPosition = (cards.length - 1) * cardWidth;
+                if (currentPosition >= maxPosition) {
+                    currentPosition = 0;
+                } else {
+                    currentPosition += cardWidth;
+                }
+                updateSlider();
+            }, 5000);
+        });
+    });
+</script>

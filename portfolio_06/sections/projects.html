@@ -1,0 +1,288 @@
+<div class="container">
+    <div class="section-header">
+        <h2 class="section-title animate-on-scroll" data-animation="fadeInUp">Business Projects</h2>
+        <p class="section-subtitle animate-on-scroll" data-animation="fadeInUp" data-delay="0.2s">
+            Real-world business solutions and case studies
+        </p>
+    </div>
+    
+    <div class="projects-filter animate-on-scroll" data-animation="fadeInUp">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="strategy">Strategy</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+        <button class="filter-btn" data-filter="entrepreneurship">Entrepreneurship</button>
+    </div>
+    
+    <div class="projects-grid">
+        <div class="project-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-category="strategy">
+            <div class="project-image">
+                <div class="project-overlay">
+                    <span class="project-category">Strategy</span>
+                </div>
+                <i class="fas fa-chess-board"></i>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Market Expansion Strategy</h3>
+                <p class="project-description">
+                    Developed comprehensive market entry strategy for retail chain expanding to new regions. Analysis included competitor research, target audience profiling, and risk assessment.
+                </p>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-chart-line"></i>
+                        <span>25% Growth</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span>3 Months</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.2s" data-category="marketing">
+            <div class="project-image">
+                <div class="project-overlay">
+                    <span class="project-category">Marketing</span>
+                </div>
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Digital Marketing Campaign</h3>
+                <p class="project-description">
+                    Led end-to-end digital marketing campaign for tech startup. Implemented multi-channel strategy across social media, email, and content marketing.
+                </p>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span>10K+ Reach</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-percentage"></i>
+                        <span>40% ROI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.4s" data-category="finance">
+            <div class="project-image">
+                <div class="project-overlay">
+                    <span class="project-category">Finance</span>
+                </div>
+                <i class="fas fa-coins"></i>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Financial Analysis Model</h3>
+                <p class="project-description">
+                    Created comprehensive financial model for manufacturing company. Included revenue projections, cost analysis, and investment return calculations.
+                </p>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>15 Models</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>$2M Saved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.6s" data-category="entrepreneurship">
+            <div class="project-image">
+                <div class="project-overlay">
+                    <span class="project-category">Entrepreneurship</span>
+                </div>
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Startup Business Plan</h3>
+                <p class="project-description">
+                    Developed complete business plan for sustainable products startup. Included market research, financial projections, and go-to-market strategy.
+                </p>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-file-alt"></i>
+                        <span>50 Pages</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-trophy"></i>
+                        <span>1st Place</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .projects-filter {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+        padding: 0.8rem 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: var(--radius-lg);
+        color: var(--text);
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition-fast);
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+        background: var(--gradient-primary);
+        border-color: transparent;
+        transform: translateY(-3px);
+    }
+    
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .project-card {
+        background: var(--gradient-card);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition-medium);
+    }
+    
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .project-image {
+        height: 200px;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .project-image i {
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.9);
+        z-index: 2;
+    }
+    
+    .project-overlay {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-sm);
+        backdrop-filter: blur(5px);
+    }
+    
+    .project-category {
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .project-content {
+        padding: 2rem;
+    }
+    
+    .project-title {
+        font-size: 1.4rem;
+        color: var(--accent4);
+        margin-bottom: 1rem;
+    }
+    
+    .project-description {
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+    }
+    
+    .project-stats {
+        display: flex;
+        gap: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.5rem;
+    }
+    
+    .stat {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text);
+        font-weight: 600;
+    }
+    
+    .stat i {
+        color: var(--accent4);
+    }
+    
+    @media (max-width: 992px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .projects-filter {
+            gap: 0.5rem;
+        }
+        
+        .filter-btn {
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<script>
+    // Project filtering functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Show/hide project cards based on filter
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    });
+</script>

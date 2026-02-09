@@ -1,0 +1,187 @@
+<div class="container">
+    <div class="section-header">
+        <h2 class="section-title animate-on-scroll" data-animation="fadeInUp">Education</h2>
+        <p class="section-subtitle animate-on-scroll" data-animation="fadeInUp" data-delay="0.2s">
+            Academic journey and professional development
+        </p>
+    </div>
+    
+    <div class="education-timeline">
+        <div class="timeline-item animate-on-scroll" data-animation="fadeInUp">
+            <div class="timeline-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content interactive-card">
+                <div class="timeline-header">
+                    <h3>Bachelor of Business Administration</h3>
+                    <span class="timeline-date">2021 - 2025</span>
+                </div>
+                <div class="timeline-subtitle">University of Business Excellence</div>
+                <div class="timeline-details">
+                    <p><strong>Specialization:</strong> Strategic Management & Entrepreneurship</p>
+                    <p><strong>GPA:</strong> 3.9/4.0 (Cum Laude)</p>
+                    <p><strong>Relevant Coursework:</strong> Business Strategy, Financial Management, Marketing Analytics, Organizational Behavior, Business Ethics</p>
+                    <p><strong>Achievements:</strong> Dean's List (All Semesters), Business Strategy Competition Winner</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll" data-animation="fadeInUp" data-delay="0.2s">
+            <div class="timeline-icon">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <div class="timeline-content interactive-card">
+                <div class="timeline-header">
+                    <h3>Business Analytics Certification</h3>
+                    <span class="timeline-date">2023</span>
+                </div>
+                <div class="timeline-subtitle">Harvard Business School Online</div>
+                <div class="timeline-details">
+                    <p><strong>Focus:</strong> Data-driven decision making, statistical analysis, predictive modeling</p>
+                    <p><strong>Skills:</strong> Excel Analytics, SQL for Business, Data Visualization, Dashboard Creation</p>
+                    <p><strong>Projects:</strong> Market Analysis for Retail Chain, Customer Segmentation Model</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll" data-animation="fadeInUp" data-delay="0.4s">
+            <div class="timeline-icon">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="timeline-content interactive-card">
+                <div class="timeline-header">
+                    <h3>High School Diploma</h3>
+                    <span class="timeline-date">2017 - 2021</span>
+                </div>
+                <div class="timeline-subtitle">Business Magnet High School</div>
+                <div class="timeline-details">
+                    <p><strong>Focus:</strong> Business Fundamentals, Economics, Leadership Development</p>
+                    <p><strong>Achievements:</strong> Valedictorian, Student Council President, DECA National Finalist</p>
+                    <p><strong>Extracurricular:</strong> Business Club Founder, Community Service Leader</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .education-timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .education-timeline::before {
+        content: '';
+        position: absolute;
+        left: 30px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--gradient-primary);
+    }
+    
+    .timeline-item {
+        position: relative;
+        padding-left: 80px;
+        margin-bottom: 3rem;
+    }
+    
+    .timeline-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .timeline-icon {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        z-index: 2;
+        box-shadow: var(--shadow-md);
+    }
+    
+    .timeline-content {
+        background: var(--gradient-card);
+        padding: 2rem;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition-medium);
+    }
+    
+    .timeline-content:hover {
+        transform: translateX(10px);
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .timeline-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .timeline-header h3 {
+        font-size: 1.5rem;
+        color: var(--accent4);
+    }
+    
+    .timeline-date {
+        background: var(--gradient-primary);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    
+    .timeline-subtitle {
+        color: var(--text);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .timeline-details p {
+        color: var(--text-secondary);
+        margin-bottom: 0.8rem;
+        line-height: 1.6;
+    }
+    
+    .timeline-details strong {
+        color: var(--text);
+    }
+    
+    @media (max-width: 768px) {
+        .education-timeline::before {
+            left: 25px;
+        }
+        
+        .timeline-item {
+            padding-left: 70px;
+        }
+        
+        .timeline-icon {
+            left: 15px;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+</style>

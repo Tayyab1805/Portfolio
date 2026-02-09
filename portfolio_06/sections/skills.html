@@ -1,0 +1,255 @@
+<div class="container">
+    <div class="section-header">
+        <h2 class="section-title animate-on-scroll" data-animation="fadeInUp">Business Skills</h2>
+        <p class="section-subtitle animate-on-scroll" data-animation="fadeInUp" data-delay="0.2s">
+            Core competencies and professional expertise
+        </p>
+    </div>
+    
+    <div class="skills-content">
+        <div class="skills-chart animate-on-scroll" data-animation="slideInLeft">
+            <div class="chart-container">
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="skills-list">
+            <div class="skill-category animate-on-scroll" data-animation="fadeInUp">
+                <h3 class="category-title">
+                    <i class="fas fa-brain"></i>
+                    Strategic Skills
+                </h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Business Strategy</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Market Analysis</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Competitive Intelligence</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category animate-on-scroll" data-animation="fadeInUp" data-delay="0.2s">
+                <h3 class="category-title">
+                    <i class="fas fa-chart-line"></i>
+                    Analytical Skills
+                </h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Data Analysis</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Financial Modeling</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Risk Assessment</span>
+                            <span class="skill-percent">87%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="87"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category animate-on-scroll" data-animation="fadeInUp" data-delay="0.4s">
+                <h3 class="category-title">
+                    <i class="fas fa-users"></i>
+                    Leadership Skills
+                </h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Team Management</span>
+                            <span class="skill-percent">93%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="93"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Communication</span>
+                            <span class="skill-percent">96%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="96"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Conflict Resolution</span>
+                            <span class="skill-percent">89%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="89"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .skills-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+    
+    .skills-chart {
+        background: var(--gradient-card);
+        padding: 2rem;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-md);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: 400px;
+    }
+    
+    .chart-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .skills-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .skill-category {
+        background: var(--gradient-card);
+        padding: 2rem;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition-medium);
+    }
+    
+    .skill-category:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .category-title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--accent4);
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .category-title i {
+        font-size: 1.5rem;
+    }
+    
+    .skill-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .skill-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .skill-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+    
+    .skill-name {
+        color: var(--text);
+        font-weight: 600;
+    }
+    
+    .skill-percent {
+        color: var(--accent4);
+        font-weight: 700;
+    }
+    
+    .skill-bar {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .skill-progress {
+        height: 100%;
+        background: var(--gradient-accent);
+        border-radius: 4px;
+        width: 0;
+        transition: width 1.5s ease-in-out;
+        position: relative;
+    }
+    
+    .skill-progress::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        animation: shimmer 2s infinite;
+    }
+    
+    @media (max-width: 992px) {
+        .skills-content {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        
+        .skills-chart {
+            height: 350px;
+        }
+    }
+</style>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Tayyab | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+   <!-- 19 Dec 2025 by chat gpt -->
+   <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2d6bc9;
+            --accent-color: #e63946;
+            --bg-light: #f8f9fa;
+            --bg-gray: #e9ecef;
+            --text-dark: #212529;
+            --text-gray: #6c757d;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* --- Global Styles --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 10px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--secondary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2a4365 100%);
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            padding-top: 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text .tagline {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.5rem;
+            color: var(--bg-gray);
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .location {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .profile-img-container {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 8px solid rgba(255,255,255,0.1);
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .profile-initials {
+            font-size: 100px;
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        /* --- About Section --- */
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .quality-card {
+            padding: 30px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .quality-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .quality-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        /* --- Education Timeline --- */
+        #education { background-color: var(--bg-light); }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--white);
+            border: 4px solid var(--accent-color);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left { left: 0; }
+        .right { left: 50%; }
+
+        .right::after { left: -10px; }
+
+        .timeline-card {
+            padding: 20px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-card h3 { color: var(--primary-color); }
+        .timeline-card span { font-weight: bold; color: var(--secondary-color); font-size: 0.9rem; }
+
+        /* --- Skills Section --- */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .skill-group h3 { margin-bottom: 25px; border-left: 4px solid var(--secondary-color); padding-left: 10px; }
+
+        .skill-item { margin-bottom: 20px; }
+
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 500; }
+
+        .progress-bg {
+            background: var(--bg-gray);
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: var(--secondary-color);
+            height: 100%;
+            width: 0; /* Animated with JS */
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* --- Certifications --- */
+        #certifications { background-color: var(--bg-light); }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .cert-card:hover { transform: translateY(-5px); }
+
+        .cert-card i { color: var(--secondary-color); font-size: 1.5rem; margin-top: 5px; }
+
+        /* --- Experience Section --- */
+        .exp-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .exp-list { margin-top: 15px; list-style-position: inside; }
+
+        /* --- Achievements Section --- */
+        #achievements { background-color: var(--bg-light); }
+
+        .ach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .ach-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .ach-card i { font-size: 2.5rem; color: var(--accent-color); }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            gap: 20px;
+        }
+
+        .stat-item h2 { font-size: 2.5rem; color: var(--secondary-color); }
+
+        /* --- Contact Section --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info-item i {
+            width: 45px;
+            height: 45px;
+            background: var(--bg-gray);
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .contact-form textarea { height: 150px; }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 992px) {
+            .hero-content, .skills-container, .contact-container { grid-template-columns: 1fr; text-align: center; }
+            .hero-text p { margin-left: auto; margin-right: auto; }
+            .quality-grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: 1fr 1fr; }
+            .ach-grid { grid-template-columns: 1fr; }
+            .profile-img-container { width: 250px; height: 250px; }
+            .hero-text h1 { font-size: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 20px; }
+            .timeline-item::after { left: 21px; }
+            .right { left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="tagline">Hello, I'm</p>
+                <h1>Muhammad Tayyab</h1>
+                <p class="subtitle">— Problem Solver</p>
+                <p>Turning data into insights and ideas into reality. A passionate student combining analytical thinking with real-world business experience.</p>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan
+                </div>
+                <a href="#achievements" class="btn">View My Work</a>
+            </div>
+            <div class="profile-img-container">
+                <div class="profile-initials">MT</div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>I am a BS Business Analytics student at IIUI with a deep interest in how data-driven decisions shape the modern business landscape. My journey is defined by a curiosity to solve complex problems and a drive for academic and professional excellence.</p>
+                <br>
+                <p>Beyond the classroom, I actively participate in national-level competitions and manage real-world operations, allowing me to bridge the gap between theoretical knowledge and practical application.</p>
+            </div>
+
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data-Driven</h3>
+                    <p>Passionate about applying analytical solutions to real-world challenges</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>High Achiever</h3>
+                    <p>Proven track record with 1st & 3rd positions in national competitions</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Leader</h3>
+                    <p>Hands-on experience managing production and warehouse operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">My Academic Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <span>4th Semester • Expected 2028</span>
+                        <h3>BS Business Analytics</h3>
+                        <p>International Islamic University Islamabad (IIUI)</p>
+                        <p><strong>Currently Pursuing</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-card">
+                        <span>Intermediate</span>
+                        <h3>HSSC</h3>
+                        <p>FG Sir Syed College</p>
+                        <p>Score: 76% (840/1100)</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-card">
+                        <span>Matriculation</span>
+                        <h3>SSC</h3>
+                        <p>Allied School</p>
+                        <p>Score: 1076/1100 - <strong>Outstanding</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Communication</span><span>90%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Problem Solving</span><span>95%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Team Leadership</span><span>85%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" data-width="85%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Technical & Analytical</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Python Analytics</span><span>70%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>MS Office Suite</span><span>90%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Data Visualization</span><span>65%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" data-width="65%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Courses & Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <h4>Introduction to Data Science</h4>
+                        <p>Cisco • Verified</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-code"></i>
+                    <div>
+                        <h4>Pandas (Python)</h4>
+                        <p>Kaggle • Verified</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <div>
+                        <h4>Modern Web Design</h4>
+                        <p>HTML & CSS</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-file-excel"></i>
+                    <div>
+                        <h4>Advanced Excel 2021</h4>
+                        <p>Online Course</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-brain"></i>
+                    <div>
+                        <h4>Introduction to Modern AI</h4>
+                        <p>Online Course</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-database"></i>
+                    <div>
+                        <h4>Management Info Systems</h4>
+                        <p>University Course</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn">See More Courses</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Background</h2>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3>Production & Warehouse Manager</h3>
+                        <p><strong>Dressy (Wholesale Shop)</strong></p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p>June 2023 - Present</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Pakistan</p>
+                    </div>
+                </div>
+                <p>Leading the operational workflow for a wholesale business, ensuring inventory accuracy and production efficiency. Responsible for managing staff and optimizing supply chain processes.</p>
+                <ul class="exp-list">
+                    <li>Logistics Management</li>
+                    <li>Process Optimization</li>
+                    <li>Team Leadership</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title">Projects & Achievements</h2>
+            <div class="ach-grid">
+                <div class="ach-card">
+                    <i class="fas fa-medal"></i>
+                    <div>
+                        <h4>Statistical Model Competition</h4>
+                        <p><strong>1st Position</strong> - FGEI (All-Pakistan)</p>
+                    </div>
+                </div>
+                <div class="ach-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <h4>Business Idea Competition 2025</h4>
+                        <p><strong>3rd Position</strong> - NUML (64 Teams)</p>
+                    </div>
+                </div>
+                <div class="ach-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                        <h4>Academic Excellence</h4>
+                        <p><strong>3rd Position</strong> - Allied Schools (Federal Board)</p>
+                    </div>
+                </div>
+                <div class="ach-card">
+                    <i class="fas fa-laptop"></i>
+                    <div>
+                        <h4>PM Laptop Scheme 2025</h4>
+                        <p>Awarded based on Academic Merit</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-item"><h2>4+</h2><p>Awards</p></div>
+                <div class="stat-item"><h2>64+</h2><p>Teams Competed</p></div>
+                <div class="stat-item"><h2>3+</h2><p>Web Projects</p></div>
+                <div class="stat-item"><h2>10+</h2><p>Certifications</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p style="margin-bottom: 30px;">I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div><p>Email</p><strong>tayyabtayyabe@gmail.com</strong></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div><p>Phone</p><strong>+92 320 5722442</strong></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div><p>LinkedIn</p><strong>linkedin.com/in/tayyab1805</strong></div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© Muhammad Tayyab. Made with <span style="color:var(--accent-color)">❤️</span></p>
+            <p>Muhammad Tayyab • Problem Solver</p>
+        </div>
+    </footer>
+
+    <script>
+        // Progress Bar Animation on Scroll
+        const observerOptions = { threshold: 0.5 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target;
+                    progressBar.style.width = progressBar.getAttribute('data-width');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.progress-fill').forEach(bar => observer.observe(bar));
+
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message, Muhammad Tayyab will get back to you soon!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

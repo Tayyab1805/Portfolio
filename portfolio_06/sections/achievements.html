@@ -1,0 +1,127 @@
+<div class="container">
+    <div class="section-header">
+        <h2 class="section-title animate-on-scroll" data-animation="fadeInUp">Achievements</h2>
+        <p class="section-subtitle animate-on-scroll" data-animation="fadeInUp" data-delay="0.2s">
+            Recognition and accomplishments
+        </p>
+    </div>
+    
+    <div class="achievements-grid">
+        <div class="achievement-card animate-on-scroll interactive-card" data-animation="fadeInUp">
+            <div class="achievement-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-content">
+                <h3>National Business Competition Winner</h3>
+                <div class="achievement-date">2023</div>
+                <p>1st place in National Undergraduate Business Strategy Competition among 200+ teams.</p>
+            </div>
+        </div>
+        
+        <div class="achievement-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.2s">
+            <div class="achievement-icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <div class="achievement-content">
+                <h3>Outstanding Leadership Award</h3>
+                <div class="achievement-date">2022</div>
+                <p>Recognized for exceptional leadership in student organizations and community service.</p>
+            </div>
+        </div>
+        
+        <div class="achievement-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.4s">
+            <div class="achievement-icon">
+                <i class="fas fa-medal"></i>
+            </div>
+            <div class="achievement-content">
+                <h3>Academic Excellence Scholarship</h3>
+                <div class="achievement-date">2021-2024</div>
+                <p>Full-tuition scholarship awarded for maintaining 3.9+ GPA throughout degree program.</p>
+            </div>
+        </div>
+        
+        <div class="achievement-card animate-on-scroll interactive-card" data-animation="fadeInUp" data-delay="0.6s">
+            <div class="achievement-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="achievement-content">
+                <h3>Published Research Paper</h3>
+                <div class="achievement-date">2023</div>
+                <p>Co-authored research paper on "Sustainable Business Models" published in academic journal.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .achievement-card {
+        background: var(--gradient-card);
+        padding: 2rem;
+        border-radius: var(--radius-lg);
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        box-shadow: var(--shadow-md);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition-medium);
+    }
+    
+    .achievement-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .achievement-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.8rem;
+        flex-shrink: 0;
+    }
+    
+    .achievement-content {
+        flex: 1;
+    }
+    
+    .achievement-content h3 {
+        color: var(--accent4);
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .achievement-date {
+        color: var(--accent2);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .achievement-content p {
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+    
+    @media (max-width: 768px) {
+        .achievements-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .achievement-card {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+    }
+</style>

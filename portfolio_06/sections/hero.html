@@ -1,0 +1,249 @@
+<div class="container">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title animate-on-scroll" data-animation="slideInLeft">
+                Future <span class="highlight">Business</span> Leader
+            </h1>
+            <h2 class="hero-subtitle animate-on-scroll" data-animation="slideInLeft" data-delay="0.2s">
+                BBA Student | Strategy Consultant | Entrepreneur
+            </h2>
+            <p class="hero-description animate-on-scroll" data-animation="slideInLeft" data-delay="0.4s">
+                I transform complex business challenges into innovative solutions through strategic thinking, data analysis, and leadership skills. Currently pursuing a Bachelor of Business Administration with focus on strategic management and entrepreneurship.
+            </p>
+            
+            <div class="hero-buttons animate-on-scroll" data-animation="fadeInUp" data-delay="0.6s">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    <i class="fas fa-briefcase"></i> View Projects
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-visual animate-on-scroll" data-animation="slideInRight">
+            <div class="visual-container">
+                <div class="floating-card card-1">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Strategy</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Marketing</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-handshake"></i>
+                    <span>Leadership</span>
+                </div>
+                <div class="main-visual">
+                    <div class="visual-content">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Business Analyst</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+    
+    .highlight {
+        background: var(--gradient-accent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+        color: var(--accent4);
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 2.5rem;
+        line-height: 1.8;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .btn {
+        padding: 1rem 2rem;
+        border-radius: var(--radius-lg);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: var(--transition-medium);
+    }
+    
+    .btn-primary {
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+    }
+    
+    .btn-secondary {
+        background: transparent;
+        color: var(--accent4);
+        border: 2px solid var(--accent4);
+    }
+    
+    .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .hero-visual {
+        position: relative;
+    }
+    
+    .visual-container {
+        position: relative;
+        height: 400px;
+    }
+    
+    .main-visual {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        height: 250px;
+        background: var(--gradient-card);
+        border-radius: var(--radius-xl);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-lg);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .visual-content {
+        text-align: center;
+    }
+    
+    .visual-content i {
+        font-size: 4rem;
+        color: var(--accent4);
+        margin-bottom: 1rem;
+    }
+    
+    .visual-content h3 {
+        font-size: 1.5rem;
+        color: var(--text);
+    }
+    
+    .floating-card {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: var(--gradient-card);
+        border-radius: var(--radius-lg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        box-shadow: var(--shadow-md);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: float 6s infinite ease-in-out;
+    }
+    
+    .floating-card i {
+        font-size: 2rem;
+        color: var(--accent4);
+    }
+    
+    .floating-card span {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text);
+    }
+    
+    .card-1 {
+        top: 0;
+        left: 0;
+        animation-delay: 0s;
+    }
+    
+    .card-2 {
+        top: 0;
+        right: 0;
+        animation-delay: 2s;
+    }
+    
+    .card-3 {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation-delay: 4s;
+    }
+    
+    @media (max-width: 992px) {
+        .hero-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 3rem;
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+        }
+        
+        .visual-container {
+            height: 350px;
+        }
+        
+        .main-visual {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .floating-card {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .hero-title {
+            font-size: 2.2rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .hero-buttons {
+            flex-direction: column;
+        }
+        
+        .btn {
+            justify-content: center;
+        }
+    }
+</style>
