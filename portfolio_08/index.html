@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Muhammad Tayyab | 3D Interactive Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-3d">
+            <div class="cube-loader">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+            </div>
+        </div>
+        <p class="loading-text">Loading 3D Portfolio...</p>
+        <div class="loading-progress">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Canvas Container for Three.js -->
+    <div id="canvas-container" class="canvas-container"></div>
+
+    <!-- UI Overlay -->
+    <div class="ui-overlay">
+        <!-- Navigation -->
+        <nav class="nav-3d">
+            <div class="nav-logo">MT<span>.</span></div>
+            <div class="nav-links">
+                <button class="nav-btn" data-section="home">Home</button>
+                <button class="nav-btn" data-section="about">About</button>
+                <button class="nav-btn" data-section="education">Education</button>
+                <button class="nav-btn" data-section="skills">Skills</button>
+                <button class="nav-btn" data-section="experience">Experience</button>
+                <button class="nav-btn" data-section="projects">Projects</button>
+                <button class="nav-btn" data-section="contact">Contact</button>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Main Content Sections (will be populated by JS) -->
+        <div id="content-sections" class="content-sections"></div>
+
+        <!-- Floating UI Elements -->
+        <div class="floating-ui">
+            <button class="theme-toggle-3d" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="https://m-tayyab.lovable.app/" target="_blank" class="cv-button-3d">
+                <i class="fas fa-download"></i> CV
+                <span class="cv-tooltip">Download CV</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/",
+                "gsap": "https://unpkg.com/gsap@3.12.5/index.js"
+            }
+        }
+    </script>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
